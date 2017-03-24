@@ -2,8 +2,10 @@
 
 
 
+  
 
-<html class="theme-next pisces" lang="en">
+
+<html class="theme-next mist use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -99,10 +101,10 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":true,"scrollpercent":true},
     fancybox: true,
-    motion: false,
+    motion: true,
     duoshuo: {
       userId: '6398819891410896000',
       author: 'Author'
@@ -168,7 +170,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <h1 class="site-subtitle" itemprop="description"></h1>
       
   </div>
 
@@ -273,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
@@ -283,7 +285,7 @@
                 </a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -347,13 +349,8 @@
 Quick Start aaaCreate a new post1$ hexo new "My New Post"
 More info: Writing
 Run server1$ hexo server
-More info: Server
-Generate static files1$ hexo generate
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-More info: Deployment
-
-          
+Mor
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/19/hello-world/#more" rel="contents">
@@ -419,7 +416,7 @@ More info: Deployment
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
@@ -429,7 +426,7 @@ More info: Deployment
                 </a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -451,6 +448,28 @@ More info: Deployment
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/interview/" itemprop="url" rel="index">
+                    <span itemprop="name">interview</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -490,12 +509,6 @@ More info: Deployment
         
           
           面试经历
-阿里运维部
-线程安全
-Python 装饰器w
-Linux 软连接和硬链接
-HDFS 和 MapReduce 架构
-
 阿里安全部
 线程安全
 Python 装饰器
@@ -510,160 +523,17 @@ Hive 索引 分区字段
 多个属性如何判断哪个是关键因素
 决策树和随机森林的区别
 KNN的优化方法
+线程安全
+Python 装饰器w
+Linux 软连接和硬链接
+HDFS 和 MapReduce 架构
 
 百度网页搜索部
 C++ 指针和引用的区别
 大文件消除重复的
 TCP / UDP
 ServerSocker 
-Python 的优缺点
-tuple list dict 的实现原理
-MapReduce
-文件的第5行
-操作系统的了解
-计算机网络的了解
-死锁的产生
-字符串()()()()) 括号的判断 （栈）
-投票机制 ova ovo
-KNN 
-决策树
-Docker
-NoSQL 的使用
-C++ 多继承
-C++ map实现原理
-C++ static 初始化
-C++ 多态实现的方式
-排序的稳定性
-TCP/UDP
-编译距离
-
-百度复合搜索部
-C++ Struct Union区别
-new / malloc
-构造函数和析构函数，是否可以virtual修饰
-函数指针 声明 int func(int A, int B)
-链表定义，增删方法实现
-快排
-大文件得到出现次数大于1的数
-线程安全
-锁的种类
-MapReduce url
-二叉树之形遍历
-游戏的架构
-Python 伪线程
-打印当前目录的.h结尾的文件名
-打印文件第4列=1的行
-
-
-百度系统部
-SVM 推导
-NN 推导
-最优化查找算法
-优先队列
-协程 进程 线程
-高并发 I/O
-Python 伪线程
-设计模式（适配器）
-B B+ 应用
-质数
-
-百度大数据部
-HDFS 和 MapReduce 架构
-进程 线程 
-设计模式（工厂C++）
-显示一个目录下所有子文件大于100M (Shell Script)
-已知两条单链表有交点，找出交点。
-找出一个数组中出现一次的数字
-两个数组判断是否相同
-
-搜狗网页搜索部
-文件中每行存储url，按照长度进行排序。(Shell、Python)
-SVM 在 Spark 上的参数
-NN 
-SVM 推导
-删除一个目录下a 开头的文件
-获取一个百万级数据的第50万行
-贝叶斯公式推导
-三个算法题
-
-搜狗桌面部——大数据部
-实习项目数据量有多大
-全表扫描 索引
-数据库原理
-zookeeper
-vim 使用
-a.join(b) 原理 小。大
-2 3 5 7的公倍数， 第 n 个。
-
-
-
-
-Data
-Id
-Times
-
-
-
-
-
-1
-1
-
-
-
-2
-2
-
-
-
-1
-2
-
-
-
-
-
-
-Data
-Id
-Times    
-
-
-
-
- 2017
-1
-1
-
-
- 2016
-2
-2
-
-
- 2015
-1
-2
-
-
-
-
-统计出以上表格中最后次数的正态分布
-id = xxxnbamac两会大数据云计算id = xxxxxxxxxxxxxxx
-
-输出id中搜索了“两会”,前后各两条。输出id, nba, mac, 两会, 大数据, 云计算.
-
-
-美团
-git 原理
-I am a student -&gt; student a am I
-LR
-Data Statistic  | Data Mining—-                   | —  ETL Hive        |  Spark MapRecue
-
-
-亚马逊
-数据库范式
-优化百万数
+Pyth
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -741,8 +611,8 @@ Data Statistic  | Data Mining—-                   | —  ETL Hive        |  Sp
                alt="Eric Wang" />
           <p class="site-author-name" itemprop="name">Eric Wang</p>
            
-              <p class="site-description motion-element" itemprop="description">Every day is new day.</p>
-          
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
 
@@ -756,13 +626,22 @@ Data Statistic  | Data Mining—-                   | —  ETL Hive        |  Sp
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
 
           
             
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -950,13 +829,6 @@ Data Statistic  | Data Mining—-                   | —  ETL Hive        |  Sp
   
   
 
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
   
 
   
@@ -1016,6 +888,21 @@ Data Statistic  | Data Mining—-                   | —  ETL Hive        |  Sp
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
@@ -1024,7 +911,7 @@ Data Statistic  | Data Mining—-                   | —  ETL Hive        |  Sp
 
   
   <script type="text/javascript" color="0,0,0" opacity='0.3' zIndex="-1" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-
   
+
 </body>
 </html>
