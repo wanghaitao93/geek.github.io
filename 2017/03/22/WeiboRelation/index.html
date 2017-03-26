@@ -88,28 +88,22 @@
 
 
 
-<meta name="description" content="MapReduce 计算π在Intellij IDEA创建mapreduce项目，具体流程请见
-http://www.cnblogs.com/xia520pi/archive/2012/05/16/2504205.html
-http://blog.csdn.net/fenghuibian/article/details/52918576
-设计程序当创建好后，分析计算PI的算法。
-定义：以圆形半径为">
+<meta name="description" content="MapReduce 统计微博id的关系问题描述已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。
+设计程序每遍历一行，我们能得知两个消息, 一个是前id关注了一人，一个是后面的id被一个人关注了。
+例如已知xxx yyy数据。我们得知id=xxx, 1, 0id=yy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MapReduce Calculate π">
-<meta property="og:url" content="http://www.geek888.com/2017/03/21/calculatePI/index.html">
+<meta property="og:title" content="MapReduce Statistic Weibo Relation">
+<meta property="og:url" content="http://www.geek888.com/2017/03/22/WeiboRelation/index.html">
 <meta property="og:site_name" content="Eric's blog">
-<meta property="og:description" content="MapReduce 计算π在Intellij IDEA创建mapreduce项目，具体流程请见
-http://www.cnblogs.com/xia520pi/archive/2012/05/16/2504205.html
-http://blog.csdn.net/fenghuibian/article/details/52918576
-设计程序当创建好后，分析计算PI的算法。
-定义：以圆形半径为">
-<meta property="og:updated_time" content="2017-03-25T16:26:17.000Z">
+<meta property="og:description" content="MapReduce 统计微博id的关系问题描述已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。
+设计程序每遍历一行，我们能得知两个消息, 一个是前id关注了一人，一个是后面的id被一个人关注了。
+例如已知xxx yyy数据。我们得知id=xxx, 1, 0id=yy">
+<meta property="og:updated_time" content="2017-03-26T05:54:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MapReduce Calculate π">
-<meta name="twitter:description" content="MapReduce 计算π在Intellij IDEA创建mapreduce项目，具体流程请见
-http://www.cnblogs.com/xia520pi/archive/2012/05/16/2504205.html
-http://blog.csdn.net/fenghuibian/article/details/52918576
-设计程序当创建好后，分析计算PI的算法。
-定义：以圆形半径为">
+<meta name="twitter:title" content="MapReduce Statistic Weibo Relation">
+<meta name="twitter:description" content="MapReduce 统计微博id的关系问题描述已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。
+设计程序每遍历一行，我们能得知两个消息, 一个是前id关注了一人，一个是后面的id被一个人关注了。
+例如已知xxx yyy数据。我们得知id=xxx, 1, 0id=yy">
 
 
 
@@ -137,13 +131,13 @@ http://blog.csdn.net/fenghuibian/article/details/52918576
 
 
 
-  <link rel="canonical" href="http://www.geek888.com/2017/03/21/calculatePI/"/>
+  <link rel="canonical" href="http://www.geek888.com/2017/03/22/WeiboRelation/"/>
 
 
 
 
 
-  <title> MapReduce Calculate π | Eric's blog </title>
+  <title> MapReduce Statistic Weibo Relation | Eric's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -272,7 +266,7 @@ http://blog.csdn.net/fenghuibian/article/details/52918576
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.geek888.com/2017/03/21/calculatePI/">
+    <link itemprop="mainEntityOfPage" href="http://www.geek888.com/2017/03/22/WeiboRelation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Eric Wang">
@@ -293,7 +287,7 @@ http://blog.csdn.net/fenghuibian/article/details/52918576
             
             
               
-                MapReduce Calculate π
+                MapReduce Statistic Weibo Relation
               
             
           </h2>
@@ -308,8 +302,8 @@ http://blog.csdn.net/fenghuibian/article/details/52918576
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-21T00:00:00+08:00">
-                2017-03-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-22T00:00:00+08:00">
+                2017-03-22
               </time>
             
 
@@ -349,8 +343,8 @@ http://blog.csdn.net/fenghuibian/article/details/52918576
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/21/calculatePI/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/21/calculatePI/" itemprop="commentCount"></span>
+                <a href="/2017/03/22/WeiboRelation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/22/WeiboRelation/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -381,19 +375,16 @@ http://blog.csdn.net/fenghuibian/article/details/52918576
       
 
       
-        <h2 id="MapReduce-计算π"><a href="#MapReduce-计算π" class="headerlink" title="MapReduce 计算π"></a>MapReduce 计算π</h2><p>在Intellij IDEA创建mapreduce项目，具体流程请见</p>
-<pre><code>http://www.cnblogs.com/xia520pi/archive/2012/05/16/2504205.html
-http://blog.csdn.net/fenghuibian/article/details/52918576
-</code></pre><h3 id="设计程序"><a href="#设计程序" class="headerlink" title="设计程序"></a>设计程序</h3><p>当创建好后，分析计算PI的算法。</p>
-<p>定义：以圆形半径为边长作一正方形，然後把圆形面积和此正方形面积的比例订为π，即圆形之面积与半径平方之比。</p>
-<p>通过random()方法随机取两个0~1的小数，作为x, y。(x, y)在(0, 0), (0, 1), (1, 0), (1, 1)围成的立方体中。当(x, y)的距离远点的距离小于1时，认为是π的范围。</p>
-<pre><code>package com.hadoop;
+        <h2 id="MapReduce-统计微博id的关系"><a href="#MapReduce-统计微博id的关系" class="headerlink" title="MapReduce 统计微博id的关系"></a>MapReduce 统计微博id的关系</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。</p>
+<h3 id="设计程序"><a href="#设计程序" class="headerlink" title="设计程序"></a>设计程序</h3><p>每遍历一行，我们能得知两个消息, 一个是前id关注了一人，一个是后面的id被一个人关注了。</p>
+<p>例如已知xxx yyy数据。我们得知<br>id=xxx, 1, 0<br>id=yyy, 0, 1</p>
+<p>mapper: 输出两条记录(xxx, 1), (yyy, -1)，代表xxx关注了一人，yyy被关注了一次。<br>combiner: 通过是否大于0判断是关注还是被关注，输出累加后的数据<br>例如: (xxx, 12), (xxx, -11), 代表xxx被12人关注，关注了11个人。<br>reduce: 通过是否大于0判断是关注还是被关注，输出累加后的数据<br>例如: (xxx, 12, 11), 代表xxx被12人关注，关注了11个人。</p>
+<p>源代码</p>
+<pre><code>package com.mapreduce;
 
 import java.io.IOException;
-import java.util.Random;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.FloatWritable;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -401,110 +392,110 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.util.GenericOptionsParser;
 
-public class CalculatePI {
+public class WeiboRelation {
 
-    public static class TotalNumMapper
+    public static class RelationMapper
             extends Mapper&lt;Object, Text, Text, IntWritable&gt;
     {
-
-        private final static IntWritable one = new IntWritable(1);
-        private final static IntWritable zero = new IntWritable(0);
-
-        private static Random random = new Random();
-        private Text word = new Text();
-
         public void map(Object key, Text value, Context context
         ) throws IOException, InterruptedException
         {
-            int totalNum = Integer.parseInt(value.toString());
-            int index = 0;
-            word.set(&quot;result&quot;);
+            String args[] = value.toString().split(&quot;\t&quot;);
 
-            while (index &lt; totalNum)
-            {
-                float x = random.nextFloat();
-                float y = random.nextFloat();
-
-                IntWritable intWritable = new IntWritable(0);
-
-                if (Math.sqrt(x*x + y*y) &lt; 1) {
-                    intWritable = one;
-                }
-                context.write(word, intWritable);
-                index++;
-            }
+            context.write(new Text(args[0]), new IntWritable(-1));
+            context.write(new Text(args[1]), new IntWritable(1));
         }
     }
 
-    public static class CalculatePIReducer
-            extends Reducer&lt;Text,IntWritable,Text,FloatWritable&gt; {
+    public static class RelationCombiner
+            extends Reducer&lt;Text, IntWritable, Text, IntWritable&gt;
+    {
+        public void reduce(Text key, Iterable&lt;IntWritable&gt; values,
+                        Context context
+        ) throws IOException, InterruptedException
+        {
+            int inDegreeTimes = 0;
+            int outDegreeTimes = 0;
+            for (IntWritable val : values) {
+                if (val.get() &gt; 0)
+                {
+                    inDegreeTimes += 1;
+                }else
+                {
+                    outDegreeTimes -= 1;
+                }
+            }
 
-        private FloatWritable result = new FloatWritable();
+            context.write(key, new IntWritable(inDegreeTimes));
+            context.write(key, new IntWritable(outDegreeTimes));
+        }
+    }
+
+    public static class RelationReducer
+            extends Reducer&lt;Text,IntWritable,Text, Text&gt; {
 
         public void reduce(Text key, Iterable&lt;IntWritable&gt; values,
                            Context context
         ) throws IOException, InterruptedException {
 
-            int hitSum = 0;
-            int totalSum = 0;
+            int inDegreeTimes = 0;
+            int outDegreeTimes = 0;
             for (IntWritable val : values) {
-                hitSum += val.get();
-                totalSum++;
+                int value = val.get();
+                if (value &gt; 0)
+                {
+                    inDegreeTimes += value;
+                }else
+                {
+                    outDegreeTimes += Math.abs(value);
+                }
             }
 
-            result.set((float)hitSum/(float)totalSum*4);
-            context.write(new Text(totalSum+&quot;&quot;), result);
+            String result = inDegreeTimes + &quot;, &quot; + outDegreeTimes;
+            context.write(key, new Text(result));
         }
     }
 
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
-        Job job = Job.getInstance(conf, &quot;PI count&quot;);
-        job.setJarByClass(CalculatePI.class);
-        job.setMapperClass(TotalNumMapper.class);
-//        job.setCombinerClass(CalculatePIReducer.class);
-        job.setReducerClass(CalculatePIReducer.class);
+        String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
+        if (otherArgs.length &lt; 2) {
+            System.err.println(&quot;Usage: relation &lt;in&gt; [&lt;in&gt;...] &lt;out&gt;&quot;);
+            System.exit(2);
+        }
+        Job job = Job.getInstance(conf, &quot;weibo relation&quot;);
+        job.setJarByClass(WeiboRelation.class);
+        job.setMapperClass(RelationMapper.class);
+        job.setCombinerClass(RelationCombiner.class);
+        job.setReducerClass(RelationReducer.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
-        FileInputFormat.addInputPath(job, new Path(args[0]));
-        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+        for (int i = 0; i &lt; otherArgs.length - 1; ++i) {
+            FileInputFormat.addInputPath(job, new Path(otherArgs[i]));
+        }
+        FileOutputFormat.setOutputPath(job,
+                new Path(otherArgs[otherArgs.length - 1]));
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }
-</code></pre><h3 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h3><p>用Intellij IDEA 点击 Build -&gt; Build Artifacts 生成jar包，把jar拷贝到ubuntu中。</p>
-<h3 id="创建输入数据"><a href="#创建输入数据" class="headerlink" title="创建输入数据"></a>创建输入数据</h3><p>创建一个文件夹，创建两个.txt文件并输入数据。<br>最后把创建的文件put到hdfs上去，然后进行查看</p>
-<pre><code>-&gt; hadoop dfs -mkdir /input/calFile
-
--&gt; hadoop dfs -put /home/hduser/Desktop/calFile/file*.txt /input/calFile
-
--&gt; hadoop dfs -ls /input/calFile
-
-Found 2 items
--rw-r--r--   1 hduser supergroup         16 2017-03-25 18:35 /input/calFile/file1.txt
--rw-r--r--   1 hduser supergroup         12 2017-03-25 18:35 /input/calFile/file2.txt
-</code></pre><h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><p>执行以下代码运行jar包</p>
-<pre><code>-&gt; hadoop jar /home/hduser/Desktop/CalculatePI.jar com.hadoop.CalculatePI /input/calFile /output/calPI
-</code></pre><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>执行以下命令查看结果</p>
-<pre><code>-&gt; hadoop dfs -cat /output/calPI/part-r-00000
-
-2000    3.116
+</code></pre><h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><p>由于此程序需要输入两个参数，分别是输入和输出路径。在Run -&gt; Edit Configures<br>添加 Applicaton -&gt; program arguments 添加你的输入输出路径即可。</p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>运行结果在output文件下part-r-00000</p>
+<pre><code>38120543    11, 2
+30125463    4, 3
 </code></pre><h3 id="错误调试"><a href="#错误调试" class="headerlink" title="错误调试"></a>错误调试</h3><ul>
 <li><p>当发现程序在运行中途退出，可以通过日志去判断错误的原因。</p>
 <p> 17/03/25 19:18:11 INFO mapreduce.Job: Job job_1490422271128_0005 failed with state FAILED due to: Task failed task_1490422271128_0005_m_000001<br> Job failed as tasks failed. failedMaps:1 failedReduces:0</p>
-</li>
-</ul>
-<p>解决：如上Job failed，已知程序号为1490422271128_0005，我们可以通过</p>
+<p> 解决：如上Job failed，已知程序号为1490422271128_0005，我们可以通过</p>
 <pre><code>$HADOOP_HOME/logs/userlogs/application_1490422271128_0005
-</code></pre><p>路径进行错误查看。</p>
-<ul>
-<li><p>当运行时发现在Intellij IDEA 发现运行报错</p>
-<p>  Process finished with exit code 137 (interrupted by signal 9: SIGKILL)</p>
-<p>查看log中的total个数</p>
-<p> 2017-03-25 23:48:00,363 INFO  [main] input.FileInputFormat (FileInputFormat.java:listStatus(283)) - Total input paths to process : 5<br> 017-03-25 23:48:00,409 INFO  [main] mapreduce.JobSubmitter (JobSubmitter.java:submitJobInternal(198)) - number of splits:5</p>
+</code></pre><p> 路径进行错误查看。</p>
+</li>
+<li><p>当发现程序在运行中途退出并且打印如下信息，则是内存不够了，需要释放内存。</p>
+<pre><code>Process finished with exit code 137 (interrupted by signal 9: SIGKILL)
+</code></pre><p> 解决：释放ubuntu的内存，可以关闭一些不必要的程序。运行free命令查看剩余的内存。</p>
 </li>
 </ul>
-<p>你的输入文件如果不是5个，就从命令行进入查看是否有残留的文件导致process开多了，删除相应的文件如： file2.txt~</p>
 
       
     </div>
@@ -573,8 +564,8 @@ Found 2 items
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/15/experience/" rel="next" title="Interview IT Company">
-                <i class="fa fa-chevron-left"></i> Interview IT Company
+              <a href="/2017/03/21/calculatePI/" rel="next" title="MapReduce Calculate π">
+                <i class="fa fa-chevron-left"></i> MapReduce Calculate π
               </a>
             
           </div>
@@ -582,10 +573,6 @@ Found 2 items
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/22/WeiboRelation/" rel="prev" title="MapReduce Statistic Weibo Relation">
-                MapReduce Statistic Weibo Relation <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -611,8 +598,8 @@ Found 2 items
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/21/calculatePI/"
-           data-title="MapReduce Calculate π" data-url="http://www.geek888.com/2017/03/21/calculatePI/">
+      <div class="ds-thread" data-thread-key="2017/03/22/WeiboRelation/"
+           data-title="MapReduce Statistic Weibo Relation" data-url="http://www.geek888.com/2017/03/22/WeiboRelation/">
       </div>
     
   </div>
@@ -761,7 +748,7 @@ Found 2 items
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MapReduce-计算π"><span class="nav-number">1.</span> <span class="nav-text">MapReduce 计算π</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计程序"><span class="nav-number">1.1.</span> <span class="nav-text">设计程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打包"><span class="nav-number">1.2.</span> <span class="nav-text">打包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建输入数据"><span class="nav-number">1.3.</span> <span class="nav-text">创建输入数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行程序"><span class="nav-number">1.4.</span> <span class="nav-text">运行程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果"><span class="nav-number">1.5.</span> <span class="nav-text">结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错误调试"><span class="nav-number">1.6.</span> <span class="nav-text">错误调试</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MapReduce-统计微博id的关系"><span class="nav-number">1.</span> <span class="nav-text">MapReduce 统计微博id的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计程序"><span class="nav-number">1.2.</span> <span class="nav-text">设计程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行程序"><span class="nav-number">1.3.</span> <span class="nav-text">运行程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果"><span class="nav-number">1.4.</span> <span class="nav-text">结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错误调试"><span class="nav-number">1.5.</span> <span class="nav-text">错误调试</span></a></li></ol></li></ol></div>
             
 
           </div>
