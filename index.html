@@ -371,7 +371,10 @@
           MapReduce 统计微博id的关系问题描述已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。
 设计程序每遍历一行，我们能得知两个消息, 一个是前id关注了一人，一个是后面的id被一个人关注了。
 例如已知xxx yyy数据。我们得知id=xxx, 1, 0id=yyy, 0, 1
-mapper: 输出两条记录(xxx, 1), (yyy, -1)，代表xxx关注了一人，yyy被关注了一次。combiner: 通过是否大于0判断是关注还是被关注，输出累加后的数据例
+
+mapper:     输出两条记录(xxx, 1), (yyy, -1), 代表xxx关注了一人，yyy被关注了一次。
+
+combiner:     通过是否大于0判断是关注还是被
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -530,12 +533,13 @@ mapper: 输出两条记录(xxx, 1), (yyy, -1)，代表xxx关注了一人，yyy�
       
         
           
-          MapReduce 计算π在Intellij IDEA创建mapreduce项目，具体流程请见
+          MapReduce 计算π在Intellij IDEA创建运行mapreduce项目，具体流程请见
 http://www.cnblogs.com/xia520pi/archive/2012/05/16/2504205.html
 http://blog.csdn.net/fenghuibian/article/details/52918576
 设计程序当创建好后，分析计算PI的算法。
 定义：以圆形半径为边长作一正方形，然後把圆形面积和此正方形面积的比例订为π，即圆形之面积与半径平方之比。
-通过random()方法随机取两个0~1的小数，作为x, y。(x, y)在(0, 0), (0, 1), (1
+通过random()方法随机取两个0~1的小数，作为x, y。
+(x, y)在(0, 0), (0, 1),
           ...
           <!--noindex-->
           <div class="post-button text-center">
