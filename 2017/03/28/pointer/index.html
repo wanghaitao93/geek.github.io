@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="MapReduce," />
+  <meta name="keywords" content="C++," />
 
 
 
@@ -88,22 +88,52 @@
 
 
 
-<meta name="description" content="MapReduce 统计微博id的关系问题描述已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。
-设计程序每遍历一行，我们能得知两个消息, 一个是前id关注了一人，一个是后面的id被一个人关注了。
-例如已知xxx yyy数据。我们得知id=xxx, 1, 0id=yy">
+<meta name="description" content="基础知识* ：解引用符（derefrence operator）
+&amp;amp; : 取地址符 （address of）
+
+
+int a = 1;
+int *b = &amp;amp;a;
+int **c = &amp;amp;b;
+
+int *b        //声明b是一个指向int类型的指针.
+&amp;amp;a            //a的地址
+b = &amp;amp;a        //把a的地址赋给b
+
+* 指">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MapReduce Statistic Weibo Relation">
-<meta property="og:url" content="http://www.geek888.com/2017/03/22/WeiboRelation/index.html">
+<meta property="og:title" content="C++ 指针的指针">
+<meta property="og:url" content="http://www.geek888.com/2017/03/28/pointer/index.html">
 <meta property="og:site_name" content="Eric's blog">
-<meta property="og:description" content="MapReduce 统计微博id的关系问题描述已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。
-设计程序每遍历一行，我们能得知两个消息, 一个是前id关注了一人，一个是后面的id被一个人关注了。
-例如已知xxx yyy数据。我们得知id=xxx, 1, 0id=yy">
-<meta property="og:updated_time" content="2017-03-26T06:37:12.000Z">
+<meta property="og:description" content="基础知识* ：解引用符（derefrence operator）
+&amp;amp; : 取地址符 （address of）
+
+
+int a = 1;
+int *b = &amp;amp;a;
+int **c = &amp;amp;b;
+
+int *b        //声明b是一个指向int类型的指针.
+&amp;amp;a            //a的地址
+b = &amp;amp;a        //把a的地址赋给b
+
+* 指">
+<meta property="og:updated_time" content="2017-03-27T16:43:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MapReduce Statistic Weibo Relation">
-<meta name="twitter:description" content="MapReduce 统计微博id的关系问题描述已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。
-设计程序每遍历一行，我们能得知两个消息, 一个是前id关注了一人，一个是后面的id被一个人关注了。
-例如已知xxx yyy数据。我们得知id=xxx, 1, 0id=yy">
+<meta name="twitter:title" content="C++ 指针的指针">
+<meta name="twitter:description" content="基础知识* ：解引用符（derefrence operator）
+&amp;amp; : 取地址符 （address of）
+
+
+int a = 1;
+int *b = &amp;amp;a;
+int **c = &amp;amp;b;
+
+int *b        //声明b是一个指向int类型的指针.
+&amp;amp;a            //a的地址
+b = &amp;amp;a        //把a的地址赋给b
+
+* 指">
 
 
 
@@ -131,13 +161,13 @@
 
 
 
-  <link rel="canonical" href="http://www.geek888.com/2017/03/22/WeiboRelation/"/>
+  <link rel="canonical" href="http://www.geek888.com/2017/03/28/pointer/"/>
 
 
 
 
 
-  <title> MapReduce Statistic Weibo Relation | Eric's blog </title>
+  <title> C++ 指针的指针 | Eric's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -266,7 +296,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.geek888.com/2017/03/22/WeiboRelation/">
+    <link itemprop="mainEntityOfPage" href="http://www.geek888.com/2017/03/28/pointer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Eric Wang">
@@ -287,7 +317,7 @@
             
             
               
-                MapReduce Statistic Weibo Relation
+                C++ 指针的指针
               
             
           </h2>
@@ -302,8 +332,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-22T00:00:00+08:00">
-                2017-03-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-28T00:00:00+08:00">
+                2017-03-28
               </time>
             
 
@@ -325,8 +355,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MapReduce/" itemprop="url" rel="index">
-                    <span itemprop="name">MapReduce</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -343,8 +373,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/22/WeiboRelation/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/22/WeiboRelation/" itemprop="commentCount"></span>
+                <a href="/2017/03/28/pointer/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/28/pointer/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -375,135 +405,91 @@
       
 
       
-        <h2 id="MapReduce-统计微博id的关系"><a href="#MapReduce-统计微博id的关系" class="headerlink" title="MapReduce 统计微博id的关系"></a>MapReduce 统计微博id的关系</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。</p>
-<h3 id="设计程序"><a href="#设计程序" class="headerlink" title="设计程序"></a>设计程序</h3><p>每遍历一行，我们能得知两个消息, 一个是前id关注了一人，一个是后面的id被一个人关注了。</p>
-<p>例如已知xxx yyy数据。我们得知<br>id=xxx, 1, 0<br>id=yyy, 0, 1</p>
+        <h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><pre><code>* ：解引用符（derefrence operator）
+&amp; : 取地址符 （address of）
+
+
+int a = 1;
+int *b = &amp;a;
+int **c = &amp;b;
+
+int *b        //声明b是一个指向int类型的指针.
+&amp;a            //a的地址
+b = &amp;a        //把a的地址赋给b
+
+* 指针 = 对象的值
+*b = a    = 1    
+
+int **c     //声明c是一个指向Int类型指针的指针.
+指针的指针 = &amp; 指针
+**c = &amp;b    
+</code></pre><h3 id="指针参数"><a href="#指针参数" class="headerlink" title="指针参数"></a>指针参数</h3><p>当我们把一个指针做为参数传一个方法时，其实是把指针的复本传递给了方法，也可以说传递指针是指针的值传递。</p>
+<p>如果我们在方法内部修改指针会出现问题，在方法里做修改只是修改的指针的copy而不是指针本身，原来的指针还保留着原来的值。</p>
+<p>下面例子说明这个问题</p>
+<pre><code>void func1(int *p)
+{
+    int c = 2;
+    p = &amp;c;
+}
+
+int main(int argc, const char * argv[]) 
+{
+    int a = 1;
+    int *b = &amp;a;
+    cout &lt;&lt; &quot;b pre  : &quot; &lt;&lt; *b &lt;&lt; endl;
+    func1(b);
+    cout &lt;&lt; &quot;b next : &quot; &lt;&lt; *b &lt;&lt; endl;
+}
+</code></pre><p>输出结果</p>
+<pre><code>b pre  : 1 
+b next : 1
+</code></pre><p>原因是传入的指针只是形参，改变后对原指针无影响。</p>
+<h3 id="指针的指针参数"><a href="#指针的指针参数" class="headerlink" title="指针的指针参数"></a>指针的指针参数</h3><pre><code>void func2(int **p)
+{
+    int c = 2;
+    *p = &amp;c;
+}
+
+int main(int argc, const char * argv[]) 
+{
+    int a = 1;
+    int *b = &amp;a;
+    cout &lt;&lt; &quot;b pre  : &quot; &lt;&lt; *b &lt;&lt; endl;
+    func1(&amp;b);
+    cout &lt;&lt; &quot;b next : &quot; &lt;&lt; *b &lt;&lt; endl;
+}
+</code></pre><p>输出结果</p>
+<pre><code>b pre  : 1 
+b next : 2
+</code></pre><p>我们看一下 func2(int **p)这个方法</p>
 <ul>
-<li><p>mapper:     输出两条记录(xxx, 1), (yyy, -1), 代表xxx关注了一人，yyy被关注了一次。</p>
-</li>
-<li><p>combiner:     通过是否大于0判断是关注还是被关注，输出累加后的数据<br>例如: (xxx, 12), (xxx, -11), 代表xxx被12人关注，关注了11个人。</p>
-</li>
-<li><p>reduce:     通过是否大于0判断是关注还是被关注，输出累加后的数据<br>例如: (xxx, 12, 11), 代表xxx被12人关注，关注了11个人。</p>
-</li>
+<li>p:是一个指针的指针，在这里我们不会去对它做修改，否则会丢失这个指针指向的指针地址。</li>
+<li><em>p:  是被指向的指针，是一个地址。如果我们修改它，修改的是被指向的指针的内容。换句话说，我们修改的是main()方法里 </em>b指针</li>
 </ul>
-<p>源代码</p>
-<pre><code>package com.mapreduce;
+<p>通过以上的小例子也就明白为什么C++中给链表进行操作时传递的是头结点的指针的指针了。</p>
+<h3 id="指针的指针的应用"><a href="#指针的指针的应用" class="headerlink" title="指针的指针的应用"></a>指针的指针的应用</h3><p>下面是个向单链表中添加元素的方法，传入的参数是指针的指针。</p>
+<pre><code>void AddToTail(ListNode **pHead, int value)
+{
+    ListNode *pNew = new ListNode();
+    pNew-&gt;m_nValue = value;
+    pNew-&gt;m_pNext = NULL;
 
-import java.io.IOException;
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapreduce.Job;
-import org.apache.hadoop.mapreduce.Mapper;
-import org.apache.hadoop.mapreduce.Reducer;
-import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
-import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-import org.apache.hadoop.util.GenericOptionsParser;
-
-public class WeiboRelation {
-
-    public static class RelationMapper
-            extends Mapper&lt;Object, Text, Text, IntWritable&gt;
+    if (*pHead == NULL)
     {
-        public void map(Object key, Text value, Context context
-        ) throws IOException, InterruptedException
-        {
-            String args[] = value.toString().split(&quot;\t&quot;);
-
-            context.write(new Text(args[0]), new IntWritable(-1));
-            context.write(new Text(args[1]), new IntWritable(1));
-        }
+        *pHead = pNew;
     }
-
-    public static class RelationCombiner
-            extends Reducer&lt;Text, IntWritable, Text, IntWritable&gt;
+    else
     {
-        public void reduce(Text key, Iterable&lt;IntWritable&gt; values,
-                        Context context
-        ) throws IOException, InterruptedException
-        {
-            int inDegreeTimes = 0;
-            int outDegreeTimes = 0;
-            for (IntWritable val : values) {
-                if (val.get() &gt; 0)
-                {
-                    inDegreeTimes += 1;
-                }else
-                {
-                    outDegreeTimes -= 1;
-                }
-            }
+        ListNode *pNode = *pHead;
 
-            context.write(key, new IntWritable(inDegreeTimes));
-            context.write(key, new IntWritable(outDegreeTimes));
+        while (pNode-&gt;m_pNext != NULL) {
+            pNode = pNode-&gt;m_pNext;
         }
-    }
 
-    public static class RelationReducer
-            extends Reducer&lt;Text,IntWritable,Text, Text&gt; {
-
-        public void reduce(Text key, Iterable&lt;IntWritable&gt; values,
-                           Context context
-        ) throws IOException, InterruptedException {
-
-            int inDegreeTimes = 0;
-            int outDegreeTimes = 0;
-            for (IntWritable val : values) {
-                int value = val.get();
-                if (value &gt; 0)
-                {
-                    inDegreeTimes += value;
-                }else
-                {
-                    outDegreeTimes += Math.abs(value);
-                }
-            }
-
-            String result = inDegreeTimes + &quot;, &quot; + outDegreeTimes;
-            context.write(key, new Text(result));
-        }
-    }
-
-    public static void main(String[] args) throws Exception {
-        Configuration conf = new Configuration();
-        String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
-        if (otherArgs.length &lt; 2) {
-            System.err.println(&quot;Usage: relation &lt;in&gt; [&lt;in&gt;...] &lt;out&gt;&quot;);
-            System.exit(2);
-        }
-        Job job = Job.getInstance(conf, &quot;weibo relation&quot;);
-        job.setJarByClass(WeiboRelation.class);
-        job.setMapperClass(RelationMapper.class);
-        job.setCombinerClass(RelationCombiner.class);
-        job.setReducerClass(RelationReducer.class);
-        job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(IntWritable.class);
-        for (int i = 0; i &lt; otherArgs.length - 1; ++i) {
-            FileInputFormat.addInputPath(job, new Path(otherArgs[i]));
-        }
-        FileOutputFormat.setOutputPath(job,
-                new Path(otherArgs[otherArgs.length - 1]));
-        System.exit(job.waitForCompletion(true) ? 0 : 1);
+        pNode-&gt;m_pNext = pNew;
     }
 }
-</code></pre><h3 id="项目仓库-https-github-com-wanghaitao93-mapreduce-study"><a href="#项目仓库-https-github-com-wanghaitao93-mapreduce-study" class="headerlink" title="项目仓库 https://github.com/wanghaitao93/mapreduce_study"></a>项目仓库 <a href="https://github.com/wanghaitao93/mapreduce_study" target="_blank" rel="external">https://github.com/wanghaitao93/mapreduce_study</a></h3><h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><p>由于此程序需要输入两个参数，分别是输入和输出路径。</p>
-<p>在Run -&gt; Edit Configures<br>添加 Applicaton -&gt; program arguments 添加你的输入输出路径即可。</p>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>运行结果在output文件下part-r-00000</p>
-<pre><code>38120543    11, 2
-30125463    4, 3
-</code></pre><h3 id="错误调试"><a href="#错误调试" class="headerlink" title="错误调试"></a>错误调试</h3><ul>
-<li><p>当发现程序在运行中途退出，可以通过日志去判断错误的原因。</p>
-<p> 17/03/25 19:18:11 INFO mapreduce.Job: Job job_1490422271128_0005 failed with state FAILED due to: Task failed task_1490422271128_0005_m_000001<br> Job failed as tasks failed. failedMaps:1 failedReduces:0</p>
-<p> 解决：如上Job failed，已知程序号为1490422271128_0005，我们可以通过</p>
-<pre><code>$HADOOP_HOME/logs/userlogs/application_1490422271128_0005
-</code></pre><p> 路径进行错误查看。</p>
-</li>
-<li><p>当发现程序在运行中途退出并且打印如下信息，则是内存不够了，需要释放内存。</p>
-<pre><code>Process finished with exit code 137 (interrupted by signal 9: SIGKILL)
-</code></pre><p> 解决：释放ubuntu的内存，可以关闭一些不必要的程序。运行free命令查看剩余的内存。</p>
-</li>
-</ul>
+</code></pre><p>以上就是我对C++指针的指针的一些了解！</p>
 
       
     </div>
@@ -559,7 +545,7 @@ public class WeiboRelation {
       
         <div class="post-tags">
           
-            <a href="/tags/MapReduce/" rel="tag"># MapReduce</a>
+            <a href="/tags/C/" rel="tag"># C++</a>
           
         </div>
       
@@ -572,8 +558,8 @@ public class WeiboRelation {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/21/calculatePI/" rel="next" title="MapReduce Calculate π">
-                <i class="fa fa-chevron-left"></i> MapReduce Calculate π
+              <a href="/2017/03/22/WeiboRelation/" rel="next" title="MapReduce Statistic Weibo Relation">
+                <i class="fa fa-chevron-left"></i> MapReduce Statistic Weibo Relation
               </a>
             
           </div>
@@ -581,10 +567,6 @@ public class WeiboRelation {
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/28/pointer/" rel="prev" title="C++ 指针的指针">
-                C++ 指针的指针 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -610,8 +592,8 @@ public class WeiboRelation {
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/22/WeiboRelation/"
-           data-title="MapReduce Statistic Weibo Relation" data-url="http://www.geek888.com/2017/03/22/WeiboRelation/">
+      <div class="ds-thread" data-thread-key="2017/03/28/pointer/"
+           data-title="C++ 指针的指针" data-url="http://www.geek888.com/2017/03/28/pointer/">
       </div>
     
   </div>
@@ -760,7 +742,7 @@ public class WeiboRelation {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MapReduce-统计微博id的关系"><span class="nav-number">1.</span> <span class="nav-text">MapReduce 统计微博id的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计程序"><span class="nav-number">1.2.</span> <span class="nav-text">设计程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目仓库-https-github-com-wanghaitao93-mapreduce-study"><span class="nav-number">1.3.</span> <span class="nav-text">项目仓库 https://github.com/wanghaitao93/mapreduce_study</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行程序"><span class="nav-number">1.4.</span> <span class="nav-text">运行程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果"><span class="nav-number">1.5.</span> <span class="nav-text">结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错误调试"><span class="nav-number">1.6.</span> <span class="nav-text">错误调试</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础知识"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指针参数"><span class="nav-number">2.</span> <span class="nav-text">指针参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指针的指针参数"><span class="nav-number">3.</span> <span class="nav-text">指针的指针参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指针的指针的应用"><span class="nav-number">4.</span> <span class="nav-text">指针的指针的应用</span></a></li></ol></div>
             
 
           </div>
