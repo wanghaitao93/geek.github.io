@@ -88,58 +88,31 @@
 
 
 
-<meta name="description" content="以下是我使用python的库的使用。持续跟新…
-我常用的Python库sysimport sys
+<meta name="description" content="使用python作为服务器，使用过httpserver，但是并发量一大就会有丢数据的现象，tornado大大提高了并发接受http请求的数量。以下是我写的tornado的demo。
+Tornado demo源代码#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-解决python2编码问题
-reload(sys)
-sys.setdefaultencoding(&amp;apos;utf-8&amp;apos;)
-
-
-sys.argv
-获取第一个参数
-sys.argv[1]
-
-sys.stdin,sys.stdout,sys.stderr
-遍历输入数据流
-for line i">
+from tornado import httpserver
+from tornado imp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python">
-<meta property="og:url" content="http://www.geek888.com/2017/07/20/python/index.html">
+<meta property="og:title" content="python tornado">
+<meta property="og:url" content="http://www.geek888.com/2016/04/15/python_tornado/index.html">
 <meta property="og:site_name" content="Eric's blog">
-<meta property="og:description" content="以下是我使用python的库的使用。持续跟新…
-我常用的Python库sysimport sys
+<meta property="og:description" content="使用python作为服务器，使用过httpserver，但是并发量一大就会有丢数据的现象，tornado大大提高了并发接受http请求的数量。以下是我写的tornado的demo。
+Tornado demo源代码#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-解决python2编码问题
-reload(sys)
-sys.setdefaultencoding(&amp;apos;utf-8&amp;apos;)
-
-
-sys.argv
-获取第一个参数
-sys.argv[1]
-
-sys.stdin,sys.stdout,sys.stderr
-遍历输入数据流
-for line i">
-<meta property="og:updated_time" content="2017-07-30T09:27:03.000Z">
+from tornado import httpserver
+from tornado imp">
+<meta property="og:updated_time" content="2017-07-30T09:51:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python">
-<meta name="twitter:description" content="以下是我使用python的库的使用。持续跟新…
-我常用的Python库sysimport sys
+<meta name="twitter:title" content="python tornado">
+<meta name="twitter:description" content="使用python作为服务器，使用过httpserver，但是并发量一大就会有丢数据的现象，tornado大大提高了并发接受http请求的数量。以下是我写的tornado的demo。
+Tornado demo源代码#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-解决python2编码问题
-reload(sys)
-sys.setdefaultencoding(&amp;apos;utf-8&amp;apos;)
-
-
-sys.argv
-获取第一个参数
-sys.argv[1]
-
-sys.stdin,sys.stdout,sys.stderr
-遍历输入数据流
-for line i">
+from tornado import httpserver
+from tornado imp">
 
 
 
@@ -167,13 +140,13 @@ for line i">
 
 
 
-  <link rel="canonical" href="http://www.geek888.com/2017/07/20/python/"/>
+  <link rel="canonical" href="http://www.geek888.com/2016/04/15/python_tornado/"/>
 
 
 
 
 
-  <title> python | Eric's blog </title>
+  <title> python tornado | Eric's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -302,7 +275,7 @@ for line i">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.geek888.com/2017/07/20/python/">
+    <link itemprop="mainEntityOfPage" href="http://www.geek888.com/2016/04/15/python_tornado/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Eric Wang">
@@ -323,7 +296,7 @@ for line i">
             
             
               
-                python
+                python tornado
               
             
           </h2>
@@ -338,8 +311,8 @@ for line i">
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-20T00:00:00+08:00">
-                2017-07-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-04-15T00:00:00+08:00">
+                2016-04-15
               </time>
             
 
@@ -379,8 +352,8 @@ for line i">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/07/20/python/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/20/python/" itemprop="commentCount"></span>
+                <a href="/2016/04/15/python_tornado/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/15/python_tornado/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -411,124 +384,65 @@ for line i">
       
 
       
-        <p>以下是我使用python的库的使用。持续跟新…</p>
-<h2 id="我常用的Python库"><a href="#我常用的Python库" class="headerlink" title="我常用的Python库"></a><strong>我常用的Python库</strong></h2><h3 id="sys"><a href="#sys" class="headerlink" title="sys"></a><strong>sys</strong></h3><pre><code>import sys
+        <p>使用python作为服务器，使用过httpserver，但是并发量一大就会有丢数据的现象，tornado大大提高了并发接受http请求的数量。<br>以下是我写的tornado的demo。</p>
+<h3 id="Tornado-demo"><a href="#Tornado-demo" class="headerlink" title="Tornado demo"></a><strong>Tornado demo</strong></h3><h5 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a><strong>源代码</strong></h5><pre><code>#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-解决python2编码问题
-reload(sys)
-sys.setdefaultencoding(&apos;utf-8&apos;)
+from tornado import httpserver
+from tornado import escape
+from tornado import ioloop
+from tornado import web
+import logging, subprocess
 
+logging.basicConfig(level = logging.INFO)
 
-sys.argv
-获取第一个参数
-sys.argv[1]
+class MainHandler(tornado.web.RequestHandler):
+        &quot;&quot;&quot;
+        inheritance tornado.web.RequestHandler, override get and post method
+        &quot;&quot;&quot;
+    def get(self, data):
+        self.write(&quot;get, Hello, world&quot;)
+        request = self.request
+        logging.info(&apos;get self.response : %s&apos;, request)
+        logging.info(&apos;get data : %s&apos;, data)
 
-sys.stdin,sys.stdout,sys.stderr
-遍历输入数据流
-for line in sys.stdin:
-    print line.strip()
-标准输出
-sys.stdout
-标准错误输出
-print &gt;&gt; sys.stderr, xxxx
-</code></pre><h3 id="ConfigParser"><a href="#ConfigParser" class="headerlink" title="ConfigParser"></a><strong>ConfigParser</strong></h3><p>配置文件解析</p>
-<p>config file example:</p>
-<pre><code>[My Section]
-foodir=%(dir)s/whatever
-dir=frob
-</code></pre><p>parse code</p>
-<pre><code>import ConfigParser
-def read_config_trans_data():
-    &quot;&quot;&quot;
-    read config file trans dict
-    &quot;&quot;&quot;
-    print &apos;start read config file....................&apos;
-    config_dict = {}
+    def post(self, data):
+        self.write(&quot;post, Hello, world&quot;)  
+        request = self.request
+        logging.info(&apos;post self.response : %s&apos;, request)
+        logging.info(&apos;post data : %s&apos;, data)
+        logging.info(&apos;post self.response.body : %s&apos;, self.request.body)
 
-    cf = ConfigParser.ConfigParser()
-    cf.read(&apos;conf.conf&apos;)
-    secs = cf.sections()
+def make_app():
+    return tornado.web.Application([
+        (r&quot;/(.*)&quot;, MainHandler),
+    ])
 
-    for sec in secs:
+def openServer():
+    app = make_app()
+    sockets = tornado.netutil.bind_sockets(8888)
+    # 最大限度开启子线程数
+    tornado.process.fork_processes(0)   
+    server = httpserver.HTTPServer(app)
+    server.add_sockets(sockets)
+    ioloop.IOLoop.current().start()
+    logging.info(&apos;server listen 8888...&apos;)
 
-        opts = cf.options(sec)
-        opt_dict = {}
-
-        for opt in opts:
-            opt_dict[opt] = cf.get(sec, opt).strip()
-            print &apos;%s = %s&apos; % (opt, cf.get(sec, opt).strip())
-
-        config_dict[sec] = opt_dict
-
-    print &apos;end.....................................&apos;
-    return config_dict
-</code></pre><h3 id="os"><a href="#os" class="headerlink" title="os"></a><strong>os</strong></h3><p>访问操作系统的服务功能</p>
-<pre><code>os.walk遍历文件夹的文件
-
-for root, dirs, files in os.walk(input_file_path):
-for f in files:
-    current_file_path = os.path.join(root, f)
-
-os.system &amp; os.popen
-os.system 返回执行shell命令后的状态码，成功是0，失败是-1
-os.popen 返回执行shell命令后的输出信息。
-
-os.path
-os.path.isfile(file) 如果文件不存在返回False
-os.path.exists(directory) 如果目录不存在返回False
-</code></pre><h3 id="lxml"><a href="#lxml" class="headerlink" title="lxml"></a><strong>lxml</strong></h3><p>解析html和xml</p>
-<pre><code>from lxml import etree
-
-parser = etree.XMLParser(strip_cdata=False)
-self.schema_xml = etree.parse(&quot;./schema.xml&quot;, parser = parser)
-self.g_item = etree.parse(&quot;./schema.xml&quot;, parser = parser).find(&quot;item&quot;)
-g_item = self.schema_xml.find(&quot;item&quot;)
-self.schema_xml.getroot().remove(g_item)
-
-# 删除当前的xml
-new_item.find(&quot;display/list&quot;).getparent().remove(new_item.find(&quot;display/list&quot;))
-
-parser = etree.XMLParser(recover=True)
-xml = etree.parse(&quot;xxx.xml&quot;, parser)
+openServer()
+</code></pre><h5 id="运行后接收数据打印"><a href="#运行后接收数据打印" class="headerlink" title="运行后接收数据打印:"></a><strong>运行后接收数据打印:</strong></h5><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">INFO:root:get self.response : HTTPServerRequest(protocol=&apos;http&apos;, host=&apos;192.168.0.58:8888&apos;, method=&apos;GET&apos;, uri=&apos;/sd&apos;, version=&apos;HTTP/1.1&apos;, remote_ip=&apos;192.168.0.58&apos;, headers=&#123;&apos;Accept-Language&apos;: &apos;zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3&apos;, &apos;Accept-Encoding&apos;: &apos;gzip, deflate&apos;, &apos;Host&apos;: &apos;192.168.0.58:8888&apos;, &apos;Accept&apos;: &apos;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&apos;, &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:46.0) Gecko/20100101 Firefox/46.0&apos;, &apos;Connection&apos;: &apos;keep-alive&apos;, &apos;If-None-Match&apos;: &apos;&quot;1c1047ae7f5aa841b2d04d411a9b19854fb475e8&quot;&apos;&#125;)</div><div class="line">INFO:root:get data : sd</div><div class="line">INFO:tornado.access:304 GET /sd (192.168.0.58) 1.54ms</div><div class="line"></div><div class="line">```POST</div></pre></td></tr></table></figure>
 
 
-# 去除获取xml的空格
-parse = etree.XMLParser(remove_blank_text = True)
-xml = etree.parse(current_file_path, parse)
-
-
-# 添加新的元素
-img_element = product_item.find(img)
-parent = img_element.getparent()
-
-pic_element = etree.Element(&apos;img_add&apos;)
-pic_element.text = &quot;&quot;
-parent.append(pic_element)
-
-
-# 保存修改好的xml到本地            
-fw = open(current_file_path, &apos;wb&apos;)
-fw.write(etree.tostring(xml, encoding=&apos;utf-8&apos;, xml_declaration=True, pretty_print=True))
-fw.close()
-</code></pre><h3 id="Levenshtein"><a href="#Levenshtein" class="headerlink" title="Levenshtein"></a><strong>Levenshtein</strong></h3><p>计算两个字符串的编译距离</p>
-<pre><code>import Levenshtein
-# 获取x, y的编译距离
-Levenshtein.distance(x, y)
-</code></pre><h3 id="urlparse"><a href="#urlparse" class="headerlink" title="urlparse"></a><strong>urlparse</strong></h3><p>解析url</p>
-<pre><code>&gt;&gt;&gt; url = urlparse.urlparse(&quot;http://www.baidu.com/aaa&quot;)
-&gt;&gt;&gt; url
-ParseResult(scheme=&apos;http&apos;, netloc=&apos;www.baidu.com&apos;, path=&apos;/aaa&apos;, params=&apos;&apos;, query=&apos;&apos;, fragment=&apos;&apos;)
-&gt;&gt;&gt; url.netloc
-&apos;www.baidu.com&apos;
-</code></pre><h3 id="bs4"><a href="#bs4" class="headerlink" title="bs4"></a><strong>bs4</strong></h3><p>从HTML或XML文件中提取数据</p>
-<pre><code>import bs4
-a = bs4.BeautifulSoup(‘&lt;a&gt;afafd&lt;/a&gt;’)
-   # 获取html的内容
-   a.text    
-</code></pre><h3 id="re"><a href="#re" class="headerlink" title="re"></a><strong>re</strong></h3><p>正则表达式</p>
-<pre><code>import re
-str = re.sub(&apos;\n&apos;, &quot;&quot;, str)
-</code></pre><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p>python文档(<a href="https://docs.python.org/2.7" target="_blank" rel="external">https://docs.python.org/2.7</a>)<br><a href="https://www.python.org" target="_blank" rel="external">https://www.python.org</a> 官网<br><a href="http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000" target="_blank" rel="external">http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000</a> 非常好的python入门教程<br><a href="http://www.runoob.com/python/python-tutorial.html" target="_blank" rel="external">http://www.runoob.com/python/python-tutorial.html</a> 基础教程<br><a href="http://www.oschina.net/p/pinyin-py" target="_blank" rel="external">http://www.oschina.net/p/pinyin-py</a> Python汉字转拼音模块 pinyin.py<br><a href="http://www.cnblogs.com/tqsummer/archive/2011/01/25/1944416.html" target="_blank" rel="external">http://www.cnblogs.com/tqsummer/archive/2011/01/25/1944416.html</a> Python中函数的参数定义和可变参数<br><a href="http://san-yun.iteye.com/blog/1543174" target="_blank" rel="external">http://san-yun.iteye.com/blog/1543174</a> python 判断类型<br><a href="http://blog.csdn.net/smilelance/article/details/6529950" target="_blank" rel="external">http://blog.csdn.net/smilelance/article/details/6529950</a> Python 正则表达式（模式匹配）<br><a href="http://www.runoob.com/python/python-reg-expressions.html" target="_blank" rel="external">http://www.runoob.com/python/python-reg-expressions.html</a> Python正则表达式<br><a href="http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html" target="_blank" rel="external">http://www.cnblogs.com/deerchao/archive/2006/08/24/zhengzhe30fengzhongjiaocheng.html</a> 正则表达式30分钟入门<br><a href="http://www.jb51.net/article/15707.htm" target="_blank" rel="external">http://www.jb51.net/article/15707.htm</a> 比较详细Python正则表达式操作指南(re使用)<br><a href="https://www.zhihu.com/question/29372574/answer/88744491" target="_blank" rel="external">https://www.zhihu.com/question/29372574/answer/88744491</a> 练手项目<br><a href="https://pngquant.org" target="_blank" rel="external">https://pngquant.org</a> 命令行PNG优化软件<br><a href="http://www.jb51.net/article/50070.htm" target="_blank" rel="external">http://www.jb51.net/article/50070.htm</a> os和shutil模块简述<br><a href="http://www.yiibai.com/python/python_gui_programming.html" target="_blank" rel="external">http://www.yiibai.com/python/python_gui_programming.html</a> Tkinker</p>
+INFO:tornado.access:200 POST /game (192.168.0.58) 1.26ms
+INFO:root:post self.response : HTTPServerRequest(protocol=&apos;http&apos;, host=&apos;192.168.0.58:8888&apos;, method=&apos;POST&apos;, uri=&apos;/game&apos;, version=&apos;HTTP/1.1&apos;, remote_ip=&apos;192.168.0.58&apos;, headers={&apos;Content-Length&apos;: &apos;200&apos;, &apos;Accept-Encoding&apos;: &apos;identity&apos;, &apos;Connection&apos;: &apos;close&apos;, &apos;User-Agent&apos;: &apos;Python-urllib/2.7&apos;, &apos;Host&apos;: &apos;192.168.0.58:8888&apos;, &apos;Content-Type&apos;: &apos;application/x-www-form-urlencoded&apos;})
+INFO:root:post data : game
+INFO:root:post self.response.body : 96969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696
+INFO:tornado.access:200 POST /game (192.168.0.58) 8.72ms
+</code></pre><h5 id="再次运行需要关闭开启的主进程"><a href="#再次运行需要关闭开启的主进程" class="headerlink" title="再次运行需要关闭开启的主进程"></a>再次运行需要关闭开启的主进程</h5><p>-&gt; ps a </p>
+<pre><code>35391 s000  T      0:09.28 python testTornado.py
+35392 s000  T      0:24.25 python testTornado.py
+35393 s000  T      0:24.15 python testTornado.py
+</code></pre><p>-&gt; kill -9 35391<br>关闭主进程并重新运行程序即可<br>-&gt;python xxx.py</p>
+<h3 id="tornado-website"><a href="#tornado-website" class="headerlink" title="tornado website"></a><strong>tornado website</strong></h3><p><a href="http://www.tornadoweb.cn/" target="_blank" rel="external">http://www.tornadoweb.cn/</a><br><a href="https://github.com/tornadoweb/tornado/" target="_blank" rel="external">https://github.com/tornadoweb/tornado/</a><br><a href="http://www.tornadoweb.org/en/stable/index.html" target="_blank" rel="external">http://www.tornadoweb.org/en/stable/index.html</a></p>
 
       
     </div>
@@ -597,8 +511,8 @@ str = re.sub(&apos;\n&apos;, &quot;&quot;, str)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/15/vim/" rel="next" title="vim simple use">
-                <i class="fa fa-chevron-left"></i> vim simple use
+              <a href="/2014/03/11/hexo/" rel="next" title="Hexo's flaut">
+                <i class="fa fa-chevron-left"></i> Hexo's flaut
               </a>
             
           </div>
@@ -607,8 +521,8 @@ str = re.sub(&apos;\n&apos;, &quot;&quot;, str)
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/30/work_summary/" rel="prev" title="work summary">
-                work summary <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/20/python/" rel="prev" title="python">
+                python <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -635,8 +549,8 @@ str = re.sub(&apos;\n&apos;, &quot;&quot;, str)
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/07/20/python/"
-           data-title="python" data-url="http://www.geek888.com/2017/07/20/python/">
+      <div class="ds-thread" data-thread-key="2016/04/15/python_tornado/"
+           data-title="python tornado" data-url="http://www.geek888.com/2016/04/15/python_tornado/">
       </div>
     
   </div>
@@ -685,7 +599,7 @@ str = re.sub(&apos;\n&apos;, &quot;&quot;, str)
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -789,7 +703,7 @@ str = re.sub(&apos;\n&apos;, &quot;&quot;, str)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#我常用的Python库"><span class="nav-number">1.</span> <span class="nav-text">我常用的Python库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sys"><span class="nav-number">1.1.</span> <span class="nav-text">sys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ConfigParser"><span class="nav-number">1.2.</span> <span class="nav-text">ConfigParser</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#os"><span class="nav-number">1.3.</span> <span class="nav-text">os</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lxml"><span class="nav-number">1.4.</span> <span class="nav-text">lxml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Levenshtein"><span class="nav-number">1.5.</span> <span class="nav-text">Levenshtein</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#urlparse"><span class="nav-number">1.6.</span> <span class="nav-text">urlparse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bs4"><span class="nav-number">1.7.</span> <span class="nav-text">bs4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#re"><span class="nav-number">1.8.</span> <span class="nav-text">re</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">2.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tornado-demo"><span class="nav-number">1.</span> <span class="nav-text">Tornado demo</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#源代码"><span class="nav-number">1.0.1.</span> <span class="nav-text">源代码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#运行后接收数据打印"><span class="nav-number">1.0.2.</span> <span class="nav-text">运行后接收数据打印:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#再次运行需要关闭开启的主进程"><span class="nav-number">1.0.3.</span> <span class="nav-text">再次运行需要关闭开启的主进程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tornado-website"><span class="nav-number">2.</span> <span class="nav-text">tornado website</span></a></li></ol></div>
             
 
           </div>
