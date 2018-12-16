@@ -88,22 +88,22 @@
 
 
 
-<meta name="description" content="MapReduce 统计微博id的关系问题描述已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。
+<meta name="description" content="MapReduce 统计大数据集中微博人物的关系问题描述已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。
 设计程序每遍历一行，我们能得知两个消息, 一个是前id关注了一人，一个是后面的id被一个人关注了。
-例如已知xxx yyy数据。我们得知id=xxx, 1, 0id=yy">
+例如已知xxx yyy数据。我们得知id=xxx, 1, 0">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MapReduce Statistic Weibo Relation">
+<meta property="og:title" content="MapReduce统计大数据集微博人物关系">
 <meta property="og:url" content="http://www.geek888.com/2017/03/22/WeiboRelation/index.html">
 <meta property="og:site_name" content="Eric's blog">
-<meta property="og:description" content="MapReduce 统计微博id的关系问题描述已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。
+<meta property="og:description" content="MapReduce 统计大数据集中微博人物的关系问题描述已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。
 设计程序每遍历一行，我们能得知两个消息, 一个是前id关注了一人，一个是后面的id被一个人关注了。
-例如已知xxx yyy数据。我们得知id=xxx, 1, 0id=yy">
-<meta property="og:updated_time" content="2017-07-30T09:40:44.000Z">
+例如已知xxx yyy数据。我们得知id=xxx, 1, 0">
+<meta property="og:updated_time" content="2018-12-16T12:05:48.433Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MapReduce Statistic Weibo Relation">
-<meta name="twitter:description" content="MapReduce 统计微博id的关系问题描述已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。
+<meta name="twitter:title" content="MapReduce统计大数据集微博人物关系">
+<meta name="twitter:description" content="MapReduce 统计大数据集中微博人物的关系问题描述已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。
 设计程序每遍历一行，我们能得知两个消息, 一个是前id关注了一人，一个是后面的id被一个人关注了。
-例如已知xxx yyy数据。我们得知id=xxx, 1, 0id=yy">
+例如已知xxx yyy数据。我们得知id=xxx, 1, 0">
 
 
 
@@ -137,7 +137,7 @@
 
 
 
-  <title> MapReduce Statistic Weibo Relation | Eric's blog </title>
+  <title> MapReduce统计大数据集微博人物关系 | Eric's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -287,7 +287,7 @@
             
             
               
-                MapReduce Statistic Weibo Relation
+                MapReduce统计大数据集微博人物关系
               
             
           </h2>
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MapReduce/" itemprop="url" rel="index">
-                    <span itemprop="name">MapReduce</span>
+                  <a href="/categories/bigdata/" itemprop="url" rel="index">
+                    <span itemprop="name">bigdata</span>
                   </a>
                 </span>
 
@@ -375,7 +375,7 @@
       
 
       
-        <h2 id="MapReduce-统计微博id的关系"><a href="#MapReduce-统计微博id的关系" class="headerlink" title="MapReduce 统计微博id的关系"></a>MapReduce 统计微博id的关系</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。</p>
+        <h2 id="MapReduce-统计大数据集中微博人物的关系"><a href="#MapReduce-统计大数据集中微博人物的关系" class="headerlink" title="MapReduce 统计大数据集中微博人物的关系"></a>MapReduce 统计大数据集中微博人物的关系</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>已知微博id关系的文件，如下图第一行代表id=xxx关注id=yyy。通过MapReduce得出每个id关注了多少人以及被关注了多少人。结果：id=xxx, 关注人数, 被关注人数。</p>
 <h3 id="设计程序"><a href="#设计程序" class="headerlink" title="设计程序"></a>设计程序</h3><p>每遍历一行，我们能得知两个消息, 一个是前id关注了一人，一个是后面的id被一个人关注了。</p>
 <p>例如已知xxx yyy数据。我们得知<br>id=xxx, 1, 0<br>id=yyy, 0, 1</p>
 <ul>
@@ -572,8 +572,8 @@ public class WeiboRelation {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/21/calculatePI/" rel="next" title="MapReduce Calculate π">
-                <i class="fa fa-chevron-left"></i> MapReduce Calculate π
+              <a href="/2017/03/21/calculatePI/" rel="next" title="MapReduce模拟计算π">
+                <i class="fa fa-chevron-left"></i> MapReduce模拟计算π
               </a>
             
           </div>
@@ -611,7 +611,7 @@ public class WeiboRelation {
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/22/WeiboRelation/"
-           data-title="MapReduce Statistic Weibo Relation" data-url="http://www.geek888.com/2017/03/22/WeiboRelation/">
+           data-title="MapReduce统计大数据集微博人物关系" data-url="http://www.geek888.com/2017/03/22/WeiboRelation/">
       </div>
     
   </div>
@@ -682,7 +682,7 @@ public class WeiboRelation {
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -728,7 +728,7 @@ public class WeiboRelation {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MapReduce-统计微博id的关系"><span class="nav-number">1.</span> <span class="nav-text">MapReduce 统计微博id的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计程序"><span class="nav-number">1.2.</span> <span class="nav-text">设计程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目仓库-https-github-com-wanghaitao93-mapreduce-study"><span class="nav-number">1.3.</span> <span class="nav-text">项目仓库 https://github.com/wanghaitao93/mapreduce_study</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行程序"><span class="nav-number">1.4.</span> <span class="nav-text">运行程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果"><span class="nav-number">1.5.</span> <span class="nav-text">结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错误调试"><span class="nav-number">1.6.</span> <span class="nav-text">错误调试</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MapReduce-统计大数据集中微博人物的关系"><span class="nav-number">1.</span> <span class="nav-text">MapReduce 统计大数据集中微博人物的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计程序"><span class="nav-number">1.2.</span> <span class="nav-text">设计程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目仓库-https-github-com-wanghaitao93-mapreduce-study"><span class="nav-number">1.3.</span> <span class="nav-text">项目仓库 https://github.com/wanghaitao93/mapreduce_study</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行程序"><span class="nav-number">1.4.</span> <span class="nav-text">运行程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果"><span class="nav-number">1.5.</span> <span class="nav-text">结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错误调试"><span class="nav-number">1.6.</span> <span class="nav-text">错误调试</span></a></li></ol></li></ol></div>
             
 
           </div>
